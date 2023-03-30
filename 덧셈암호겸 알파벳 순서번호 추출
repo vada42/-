@@ -1,6 +1,8 @@
-alpabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alpabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']#알파벳리스트 생성
+
 alpabet_in=input("입력: ")
-alpabet_list=list(alpabet_in)
+alpabet_list=list(alpabet_in)#입력받은 string을 리스트로 변경
+
 #암호화
 print(alpabet_list)
 y=0
