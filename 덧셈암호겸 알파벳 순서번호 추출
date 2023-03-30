@@ -1,0 +1,46 @@
+alpabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alpabet_in=input("입력: ")
+alpabet_list=list(alpabet_in)
+#암호화
+print(alpabet_list)
+y=0
+z=0
+s=int(input("암호키입력: "))
+a=0
+answer=[]
+for i in range(len(alpabet_list)):
+  while (alpabet[y]!=alpabet_list[z]):
+    y+=1
+  a=y+s
+  if a>26:
+    a=a-26
+  print(alpabet[y],":",y)
+  #print("암호값:",a)
+  answer.append(alpabet[a])
+  #print(alpabet[a])
+  print()
+  a=0
+  y=0
+  z+=1
+print(answer)
+#복호화
+print(answer)
+y=0
+z=0
+a=0
+answery=[]
+for i in range(len(answer)):
+  while (alpabet[y]!=answer[z]):
+    y+=1
+  a=y-s
+  if a<0:
+    a=a+26
+  print(alpabet[y],":",y)
+  print("복호화값:",a)
+  answery.append(alpabet[a])
+  print(alpabet[a])
+  print()
+  a=0
+  y=0
+  z+=1
+print(answery)
